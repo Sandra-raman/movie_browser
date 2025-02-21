@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+
+
+<div class="row">
+    <div class="col-2 mb-5 text-center">
+        <h4 class="my-5">Filter</h4>
+        <p >
+        <button class="btn" (click)="getMovies()">All</button>
+        </p>
+        <p class="d-inline-flex gap-1">
+          
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+           Genre
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <div class="row">
+                @for (item of updategenreArray; track $index) {
+                    <div class="col">
+                        <button class="btn" (click)="filterGenre('genre',item)">{{item}}</button>
+                    </div>
+                }
+            </div>
+        </div>
+          </div>
+         
+    </div>
+    <div class="col-10 mt-5">
+        <h2 >All Movies</h2>
+        <div class="input-group rounded " style="margin-left: 800px; width: 300px;">
+            <input [(ngModel)]="searchkey" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          </div>
+        <div class="row text-center my-5">
+        @for (item of movieList |search:searchkey| paginate: { itemsPerPage: 6, currentPage: p };track $index){
+            <div class="col-3 mx-2 mb-3" >
+                <div class="card" style="width: 18rem;" (click)="viewMovies(item._id)">
+                    <img  [src]="item.image" class="card-img-top p-1 rounded" height="250px" alt="..." >
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.title}}</h5>  
+                      <p>Released on:{{item.year}}</p>            
+                    </div>
+                  </div>
+               </div>
+        }
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

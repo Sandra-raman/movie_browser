@@ -1,0 +1,30 @@
+<div id="bg"></div>
+<h2 class="text-center text-light">Register</h2>
+
+<div>
+  <form [formGroup]="registerForm" (ngSubmit)="Registeration()">
+    <label for=""></label>
+    <input type="text" id="username" formControlName="username" placeholder="username" class="user">
+    <div>
+      @if(registerForm.get("username")?.errors && registerForm.get("username")?.touched){
+          <span class="text-danger " style="float: left;" >*Invalid Username</span>
+      }
+  </div>
+    <label for=""></label>
+    <input type="text" id="email" formControlName="email"  placeholder="email" class="email">
+    <div>
+      @if(registerForm.get("email")?.errors && registerForm.get("email")?.touched){
+          <span class="text-danger" style="margin-right: 320px;">*Invalid Email</span>
+      }
+  </div>
+    <label for=""></label>
+    <input type="password" id="password" formControlName="password" placeholder="password" class="pass">
+    <div>
+      @if(registerForm.get("password")?.errors && registerForm.get("password")?.touched){
+          <span class="text-danger mb-3" style="float: left;">*Invalid Password</span>
+      }
+  </div>
+    <button routerLink="/login">Register</button>
+      
+  </form>
+</div>

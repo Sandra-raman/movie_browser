@@ -1,0 +1,21 @@
+<div id="bg"></div>
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <h2 class="text-center text-light">LogIn</h2>
+  <label for=""></label>
+  <input type="email" placeholder="Email" formControlName="email" class="email">
+  <div>
+    @if(loginForm.get("email")?.errors && loginForm.get("email")?.touched){
+        <span class="text-danger" style="margin-right: 320px;">*Invalid Email</span>
+    }
+</div>
+  <label for=""></label>
+  <input type="password" formControlName="password" placeholder="password" class="pass">
+  <div>
+    @if(loginForm.get("password")?.errors && loginForm.get("password")?.touched){
+        <span class="text-danger" style="margin-right: 320px;">*Invalid Password</span>
+    }
+</div>
+  <button>login to your account</button>
+    
+</form>
