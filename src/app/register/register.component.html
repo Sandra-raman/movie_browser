@@ -4,7 +4,7 @@
 <div>
   <form [formGroup]="registerForm" (ngSubmit)="Registeration()">
     <label for=""></label>
-    <input type="text" id="username" formControlName="username" placeholder="username" class="user">
+    <input type="text" id="username" formControlName="username" placeholder="username" class="user form-control">
     <div>
       @if(registerForm.get("username")?.errors && registerForm.get("username")?.touched){
           <span class="text-danger " style="float: left;" >*Invalid Username</span>
@@ -24,7 +24,7 @@
           <span class="text-danger mb-3" style="float: left;">*Invalid Password</span>
       }
   </div>
-    <button routerLink="/login">Register</button>
+    <button >Register</button>
       
   </form>
 </div>

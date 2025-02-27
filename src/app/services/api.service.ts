@@ -28,8 +28,20 @@ registerAPI(reqBody:any){
     }
     return {headers}
    }
-
+  // http://localhost:3000/getARecipe/249
   getAMovieAPI(id: any) {
     return this.http.get(`${this.server_url}/getAMovie/${id}`, this.appendToken());
+  }
+  addToDownload(id:any,reqBody:any){
+    return this.http.post(`${this.server_url}/addtoDownload/${id}`,reqBody,this.appendToken())
+  }
+  addToSave(id:any,reqBody:any){
+    return this.http.post(`${this.server_url}/addtoSave/${id}`,reqBody,this.appendToken())
+  }
+  getSavedMovieAPI() {
+    return this.http.get(`${this.server_url}/getSavedMovie`, this.appendToken());
+  }
+  deleteMovieAPI(id:any) {
+    return this.http.delete(`${this.server_url}/deleteSavedMovie/${id}`, this.appendToken());
   }
 }

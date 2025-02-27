@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-2 mb-5 text-center">
-        <h4 class="my-5">Filter</h4>
+        <h4 class="my-5"></h4>
         <p >
         <button class="btn" (click)="getMovies()">All</button>
         </p>
@@ -28,9 +28,8 @@
          
     </div>
     <div class="col-10 mt-5">
-        <h2 >All Movies</h2>
-        <div class="input-group rounded " style="margin-left: 800px; width: 300px;">
-            <input [(ngModel)]="searchkey" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <div class="input-group rounded " style=" width: 900px;">
+            <input [(ngModel)]="searchkey" type="search" class="form-control rounded" placeholder="Search Movies" aria-label="Search" aria-describedby="search-addon" />
           </div>
         <div class="row text-center my-5">
         @for (item of movieList |search:searchkey| paginate: { itemsPerPage: 6, currentPage: p };track $index){
