@@ -44,4 +44,9 @@ registerAPI(reqBody:any){
   deleteMovieAPI(id:any) {
     return this.http.delete(`${this.server_url}/deleteSavedMovie/${id}`, this.appendToken());
   }
+  getrelatedMovieAPI(genre: any) {
+    return this.http.get(`${this.server_url}/relatedMovie?=${genre}`, this.appendToken());
+  }
+
+  
 }

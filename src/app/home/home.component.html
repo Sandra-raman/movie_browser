@@ -6,13 +6,12 @@
     <h1 class="text-center">~POPULAR MOVIES~</h1>
     <div class="row">
        @for (item of homeMovieList; track $index) {
-        <div class="col text-center my-1">
-            <div class="card" style="width: 18rem;">
+        <div class="col text-center my-1 " >
+            <div class="card" style="width:20rem; " (click)="viewMovies(item._id)">
                 <img [src]="item.image" class="card-img-top p-1" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{item.title}}</h5>
                   <p class="card-text">{{item.description}}</p>
-                  <a href="#" class="btn btn-primary">read more</a>
                 </div>
               </div>
         </div>
