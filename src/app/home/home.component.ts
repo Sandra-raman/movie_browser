@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ApiService } from '../services/api.service';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -17,9 +17,9 @@ homeMovieList:any=[]
 
 constructor(private api:ApiService,private route:Router){}
   ngOnInit():void{
-    this.gethomeRecipe()
+    this.gethomeMovie()
   }
-  gethomeRecipe(){
+  gethomeMovie(){
     this.api.getAllMovieAPI().subscribe((res:any)=>{
       console.log(res);
       this.homeMovieList=res.slice(-9)

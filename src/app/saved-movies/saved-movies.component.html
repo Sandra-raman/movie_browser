@@ -4,7 +4,7 @@
     <h2 class="mt-5 ms-4">Watch-List</h2>
   @for (item of SavedList;track $index){
     <div class="col-3">
-      <div class="card my-3" style="width: 18rem; margin-left: 180px;">
+      <div class="card my-3" style="width: 18rem; margin-left: 180px;" (click)="viewMovies(item._id)" >
         <img  [src]="item.image" class="card-img-top p-1 rounded" height="250px" alt="..." >
         <div class="card-body">
          <div class="d-flex">

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Berkshire+Swash&family=Bokor&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Fruktur:ital@0;1&family=Lavishly+Yours&family=Lilita+One&family=Lobster&family=Pacifico&family=Paprika&family=Rowdies:wght@300;400;700&family=Rubik+Vinyl&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Anton+SC&family=Berkshire+Swash&family=Bokor&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Fruktur:ital@0;1&family=Lavishly+Yours&family=Lilita+One&family=Lobster&family=Pacifico&family=Paprika&family=Rowdies:wght@300;400;700&family=Rubik+Vinyl&family=Spicy+Rice&display=swap');
+
+
+
+small {
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  a {
+    font-family: "Agu Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 0;
+  }
+  h5 {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 36px;
+  }
+  

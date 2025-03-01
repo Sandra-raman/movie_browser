@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Anton+SC&family=Berkshire+Swash&family=Bokor&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Fruktur:ital@0;1&family=Lavishly+Yours&family=Lilita+One&family=Lobster&family=Pacifico&family=Paprika&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&family=Rubik+Vinyl&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Anton+SC&family=Berkshire+Swash&family=Bokor&family=Courgette&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Fruktur:ital@0;1&family=Lavishly+Yours&family=Lilita+One&family=Lobster&family=Pacifico&family=Paprika&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&family=Rubik+Vinyl&family=Spicy+Rice&display=swap');
+
+
+
+
+h3 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
+  }
+b {
+    font-family: "Courgette", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: larger;
+  }
+  
+
 /* From Uiverse.io by G4b413l */ 
 .buttonDownload {
     display: inline-block;

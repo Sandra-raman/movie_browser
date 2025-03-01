@@ -10,31 +10,23 @@
         <div class="d-flex justify-content-center flex-grow-1">
             <a href="" class="nav-link mx-3 fs-5 text-dark">Home</a>
             <a href="allMovies" class="nav-link mx-3 fs-5 text-dark">Movies</a>   
+            <a href="savedMovies" class="nav-link mx-3 fs-5 text-dark">Collection</a>   
+
         </div>
 
         <!-- Logout Dropdown -->
          
         <div class="d-flex" role="search">
             <li class="nav-item dropdown" style="list-style: none;">
-              <!-- @if(isLoggedIn)
+              @if(isLoggedIn)
               {
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-user fs-3 mx-2"></i> Hey, {{loggedUserName}}
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" routerLink="/login">Profile</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" routerLink="/register">Saved Recipe</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" >Logout</a>
-                  </li>
-                </ul> -->
-              <!-- }
+               <h5>
+               Hey, {{loggedUserName}}
+               </h5>
+                
+               }
               @else
-              { -->
+              {
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="fa-solid fa-user fs-3 mx-2"></i>
                 </a>
@@ -46,7 +38,7 @@
                     <a class="dropdown-item" routerLink="/register">Register</a>
                   </li>
                 </ul>
-              <!-- } -->
+               } 
             </li>
           </div>
           
